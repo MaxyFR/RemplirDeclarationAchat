@@ -50,7 +50,7 @@ class RemplirDeclarationAchat
 	public function setNomAcheteur(string $nomAcheteur)
 	{
 		$this->pdf->SetXY(38,38);
-		$this->pdf->Cell(80,5,$nomAcheteur);
+		$this->pdf->Cell(80,5,strtoupper($nomAcheteur));
 	}
 
 	public function setSIRENAcheteur(int $siren)
@@ -68,20 +68,20 @@ class RemplirDeclarationAchat
 	public function setExtensionAdresseAcheteur(string $extension)
 	{
 		$this->pdf->SetXY(54,47);
-		$this->pdf->Cell(15,5,$extension);
+		$this->pdf->Cell(15,5,strtoupper($extension));
 	}
 
 	//Type de voie : Rue, Avenue, Boulevard ...
 	public function setTypeAdresseAcheteur(string $type)
 	{
 		$this->pdf->SetXY(71,47);
-		$this->pdf->Cell(25,5,$type);
+		$this->pdf->Cell(25,5,strtoupper($type));
 	}
 
 	public function setNomAdresseAcheteur(string $nom)
 	{
 		$this->pdf->SetXY(98,47);
-		$this->pdf->Cell(101,5,$nom);
+		$this->pdf->Cell(101,5,strtoupper($nom));
 	}
 
 	public function setCodePostalAdresseAcheteur(int $codePostal)
@@ -92,7 +92,7 @@ class RemplirDeclarationAchat
 	public function setVilleAdresseAcheteur(string $ville)
 	{
 		$this->pdf->SetXY(62,56);
-		$this->pdf->Cell(138,5,$ville);
+		$this->pdf->Cell(138,5,strtoupper($ville));
 	}
 
 
@@ -119,7 +119,7 @@ class RemplirDeclarationAchat
 	public function setAgrementVHU(string $agrement)
 	{
 		$this->pdf->SetXY(101,69);
-		$this->pdf->Cell(97,5,$agrement);
+		$this->pdf->Cell(97,5,strtoupper($agrement));
 	}
 
 	//Format de date Français jj/mm/aaaa
@@ -145,38 +145,38 @@ class RemplirDeclarationAchat
 	public function setImmatriculation(string $immatriculation)
 	{
 		$this->pdf->SetXY(11,97);
-		$this->pdf->Cell(58,5,$immatriculation,0,0,'C');
+		$this->pdf->Cell(58,5,strtoupper($immatriculation),0,0,'C');
 	}
 
 	public function setVIN(string $vin)
 	{
 		$this->pdf->SetXY(76,97);
-		$this->pdf->Cell(58,5,$vin);
+		$this->pdf->Cell(58,5,strtoupper($vin));
 	}
 
 	public function setMarque(string $marque)
 	{
 		$this->pdf->SetXY(141,97);
-		$this->pdf->Cell(58,5,$marque);
+		$this->pdf->Cell(58,5,strtoupper($marque));
 	}
 
 	public function setType(string $type)
 	{
 		$this->pdf->SetXY(11,106);
-		$this->pdf->Cell(83,5,$type);
+		$this->pdf->Cell(83,5,strtoupper($type));
 	}
 
 	public function setModele(string $modele)
 	{
 		$this->pdf->SetXY(100,106);
-		$this->pdf->Cell(53,5,$modele);
+		$this->pdf->Cell(53,5,strtoupper($modele));
 	}
 
 	//Genre : VP, CTTE, DERIVE VP ...
 	public function setGenre(string $genre)
 	{
 		$this->pdf->SetXY(160,106);
-		$this->pdf->Cell(38,5,$genre);
+		$this->pdf->Cell(38,5,strtoupper($genre));
 	}
 
 
@@ -212,7 +212,7 @@ class RemplirDeclarationAchat
 	public function setMotifCertificatImmatriculationManquant(string $motif)
 	{
 		$this->pdf->SetXY(58,141);
-		$this->pdf->Cell(140,5,$motif);
+		$this->pdf->Cell(140,5,strtoupper($motif));
 	}
 
 
@@ -223,7 +223,7 @@ class RemplirDeclarationAchat
 	public function setVilleSignatureAcheteur(string $ville)
 	{
 		$this->pdf->SetXY(20,160);
-		$this->pdf->Cell(67,5,$ville);
+		$this->pdf->Cell(67,5,strtoupper($ville));
 	}
 
 	public function setDateSignatureAcheteur(string $date)
@@ -239,10 +239,10 @@ class RemplirDeclarationAchat
 	public function setNomVendeur(string $nom)
 	{
 		$this->pdf->SetXY(38,200);
-		$this->pdf->Cell(120,5,$nom);
+		$this->pdf->Cell(120,5,strtoupper($nom));
 	}
 
-	public function setSIRENVendeur(string $siren)
+	public function setSIRENVendeur(int $siren)
 	{
 		$this->setSIREN($siren,161.5,200);
 	}
@@ -256,19 +256,19 @@ class RemplirDeclarationAchat
 	public function setExtensionAdresseVendeur(string $extension)
 	{
 		$this->pdf->SetXY(50,211);
-		$this->pdf->Cell(13,5,$extension);
+		$this->pdf->Cell(13,5,strtoupper($extension));
 	}
 
 	public function setTypeAdresseVendeur(string $type)
 	{
 		$this->pdf->SetXY(68,211);
-		$this->pdf->Cell(22,5,$type);
+		$this->pdf->Cell(22,5,strtoupper($type));
 	}
 
 	public function setNomAdresseVendeur(string $nom)
 	{
 		$this->pdf->SetXY(96,211);
-		$this->pdf->Cell(100,5,$nom);
+		$this->pdf->Cell(100,5,strtoupper($nom));
 	}
 
 	public function setCodePostalAdresseVendeur(int $codePostal)
@@ -279,7 +279,7 @@ class RemplirDeclarationAchat
 	public function setVilleAdresseVendeur(string $ville)
 	{
 		$this->pdf->SetXY(62,221);
-		$this->pdf->Cell(134,5,$ville);
+		$this->pdf->Cell(134,5,strtoupper($ville));
 	}
 
 
@@ -290,7 +290,7 @@ class RemplirDeclarationAchat
 	public function setVilleSignatureVendeur(string $ville)
 	{
 		$this->pdf->SetXY(21,245);
-		$this->pdf->Cell(40,5,$ville);
+		$this->pdf->Cell(40,5,strtoupper($ville));
 	}
 
 	public function setDateSignatureVendeur(string $date)
