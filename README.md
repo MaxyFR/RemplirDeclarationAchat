@@ -75,6 +75,17 @@ Le fichier **exemple.php** montre comment utiliser la class *RemplirDeclarationA
   - False : Ne coche pas la case
 - **output()** : Génère et affiche le PDF rempli
 
+## Problèmes connus :
+
+### Problème d'accents :
+
+En cas où vous auriez les accents qui se transforment en des caractères de la forme "*Ã©*" par exemple. Il s'agit probablement d'un problème de décodage des caractères.
+La solution est simple, utilisez la fonction **utf8_decode()** native de PHP sur votre texte de la façon suivante :
+
+```php
+$da->setNomVendeur(utf8_decode('Texte avant des accents'));
+```
+
 ## Dépendances :
 
 Le projet utilise FPDF et son extension FPDI :
